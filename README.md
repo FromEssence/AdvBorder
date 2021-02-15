@@ -1,3 +1,20 @@
 ## Code for paper "Hiding in Plain Sight: Adversarial Attack via Style Transfer on border Borders"
 
-* We will publish our code in days.
+### Requirements
+* python 3.6+
+* pytorch 1.3.1
+* torchvision 0.4.2
+* pillow 6.2.1
+* numpy 1.17
+
+### Organization<br>
+<b>borderAttack:</b> targeted and untargeted adversarial border attack.<br>
+<b>att-mid:</b> generalize the attack region and take the middle region as example.<br>
+
+<b>Subfolders:</b><br>
+  /sty_adv_border : implement the attack methods.<br>
+  /dataset : store clean images and clean borders.<br>
+  /results : store trained borders and generated adversarial borders.<br>
+### Running
+
+
