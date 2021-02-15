@@ -11,7 +11,7 @@ if __name__ == '__main__':
     parser.add_argument('--keep-size', action='store_true',
                         help='If set, image will be rescaled before applying bordering, so that unattacked and attacked '
                              'images have the same size.')
-    parser.add_argument('--target', type=int, default=1, # 定向攻击类别1
+    parser.add_argument('--target', type=int, default=1, 
                         help='Target class. If unspecified, untargeted attack will be performed. If set to -1, '
                              'target will be chosen randomly. Note that in targeted attack we aim for higher accuracy '
                              'while in untargeted attack we aim for lower accuracy.')

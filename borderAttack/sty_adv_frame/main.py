@@ -2,7 +2,7 @@
 import argparse
 import os
 import time
-from adv_trainer_tar import Trainer
+
 
 if __name__ == '__main__':
 
@@ -11,7 +11,7 @@ if __name__ == '__main__':
     parser.add_argument('--keep-size', action='store_true',
                         help='If set, image will be rescaled before applying bordering, so that unattacked and attacked '
                              'images have the same size.')
-    parser.add_argument('--target', type=int, default=1, # 定向攻击类别1
+    parser.add_argument('--target', type=int, default=0, 
                         help='Target class. If unspecified, untargeted attack will be performed. If set to -1, '
                              'target will be chosen randomly. Note that in targeted attack we aim for higher accuracy '
                              'while in untargeted attack we aim for lower accuracy.')
@@ -35,7 +35,10 @@ if __name__ == '__main__':
     args = parser.parse_known_args()[0]
 
     # os.makedirs(args.checkpoint_dir, exist_ok=True)
-
+    if args.target==1:
+         from adv_trainer_tar import Trainer
+    else:
+         from adv_trainer_untar import Trainer
     start_time = time.time()
     Trainer(args).train(args.epochs)
     end_time = time.time()
