@@ -16,5 +16,9 @@
   /dataset : store clean images and clean borders.<br>
   /results : store trained borders and generated adversarial borders.<br>
 ### Running
-
+```
+cd sty_adv_border
+python main.py --target=1 //for targeted attack
+python main.py --target=0 //for untargeted attack
+```
 
