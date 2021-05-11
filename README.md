@@ -1,4 +1,4 @@
-## Code for paper "Hiding in Plain Sight: Adversarial Attack via Style Transfer on border Borders"
+## Code for paper "Hiding in Plain Sight: Adversarial Attack via Style Transfer on Borders"
 
 ### Requirements
 * python 3.6+
